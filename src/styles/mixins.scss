@@ -1,0 +1,39 @@
+@mixin container() {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 3rem;
+}
+
+@mixin flex-row() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-col() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin section_padding() {
+    padding: 5rem 2rem;
+
+    @media(max-width: $desktop) {
+        padding: 3rem;
+    }
+
+    @media(max-width: $large-phone) {
+        padding: 2rem;
+    }
+}
+
+@mixin section_title_mb() {
+    margin-bottom: 5rem;
+
+    @media(max-width: $desktop) {
+        margin-bottom: 3rem;
+    }
+
+    @media(max-width: $large-phone) {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,47 @@
+.main-footer {
+    background-color: $col_lightgrey;
+
+    &__wrapper {
+        @include flex-row();
+        width: 100%;
+        max-width: $max-page-width;
+        margin: 0 auto;
+        @include section_padding();
+    }
+
+    &__list {
+        width: calc(100% - 220px);
+
+        @media(max-width: $lg-desktop) {
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+
+        @media(max-width: $lg-desktop) {
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        width: 100%;
+        min-width: 4rem;
+        min-height: 4rem;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        color: $col_grey;
+        transition: color $transition_rules;
+        
+        &:hover,
+        &:focus {
+            color: $col_blue;
+        }
+    }
+}

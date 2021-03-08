@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ПоискОптим</title>
+
+      <link rel="stylesheet" href="./css/styles.min.css">
+  </head>
+  <body>
+    <div style="display:none">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient id="paint0_linear" x1="3.865" x2="59.629" y1="56.168" y2="7.905" gradientUnits="userSpaceOnUse"><stop stop-color="#FD5"></stop><stop offset=".5" stop-color="#FF543E"></stop><stop offset="1" stop-color="#C837AB"></stop></linearGradient><clipPath id="clip0"><path fill="#fff" d="M0 0h60v60H0z"></path></clipPath><clipPath id="clip0"><path fill="#fff" d="M0 0h28v28H0z" transform="translate(26 26)"></path></clipPath><clipPath id="clip0"><path fill="#fff" d="M0 0h60v60H0z"></path></clipPath></defs><symbol id="icon-cup" viewBox="0 0 80 80"><rect width="80" height="80" fill="#F8FAFF" rx="40"></rect><path fill="#8BAFE7" d="M52.6 27.4h-4.2V26H31.6v1.4h-4.2c-.84 0-1.4.56-1.4 1.4v3.36c0 3.22 2.38 5.88 5.6 6.3v.14c0 4.06 2.8 7.42 6.58 8.26l-.98 2.94h-3.22c-.56 0-1.12.42-1.26.98L31.6 54h16.8l-1.12-3.22c-.14-.56-.7-.98-1.26-.98H42.8l-.98-2.94a8.42 8.42 0 0 0 6.58-8.26v-.14c3.22-.42 5.6-3.08 5.6-6.3V28.8c0-.84-.56-1.4-1.4-1.4zm-21 8.26c-1.54-.42-2.8-1.82-2.8-3.5V30.2h2.8v5.46zM42.8 40L40 38.46 37.2 40l.7-2.8-2.1-2.8h2.94L40 31.6l1.26 2.8h2.94l-2.1 2.8.7 2.8zm8.4-7.84c0 1.68-1.26 3.22-2.8 3.5V30.2h2.8v1.96z"></path></symbol><symbol id="icon-google" viewBox="0 0 60 60"><path fill="#FBBD00" d="M14.063 30c0-2.973.819-5.758 2.241-8.142V11.744H6.19C2.176 16.957 0 23.31 0 30s2.176 13.043 6.19 18.256h10.114V38.142A15.84 15.84 0 0 1 14.063 30z"></path><path fill="#0F9D58" d="M30 45.938l-7.031 7.03L30 60c6.689 0 13.043-2.176 18.256-6.19V43.706H38.153A15.935 15.935 0 0 1 30 45.938z"></path><path fill="#31AA52" d="M16.304 38.142L6.19 48.256a30.492 30.492 0 0 0 2.597 2.957C14.453 56.88 21.987 60 30 60V45.937c-5.815 0-10.912-3.13-13.696-7.795z"></path><path fill="#3C79E6" d="M60 30c0-1.825-.165-3.654-.491-5.435l-.264-1.441H30v14.063h14.233a15.866 15.866 0 0 1-6.08 6.52L48.256 53.81a30.48 30.48 0 0 0 2.957-2.597C56.88 45.547 60 38.013 60 30z"></path><path fill="#CF2D48" d="M41.27 18.73l1.242 1.243 9.944-9.943-1.243-1.243C45.547 3.12 38.013 0 30 0l-7.031 7.031L30 14.063c4.257 0 8.26 1.657 11.27 4.667z"></path><path fill="#EB4132" d="M30 14.063V0C21.987 0 14.453 3.12 8.787 8.787a30.453 30.453 0 0 0-2.597 2.957l10.114 10.114c2.784-4.664 7.88-7.796 13.696-7.796z"></path></symbol><symbol id="icon-insta" viewBox="0 0 60 60"><g clip-path="url(#clip0)"><path fill="url(#paint0_linear)" d="M3.75 4.082C-.965 8.98 0 14.182 0 29.988c0 13.125-2.29 26.283 9.695 29.38 3.742.963 36.903.963 40.64-.005 4.99-1.287 9.05-5.334 9.605-12.392.078-.985.078-32.962-.002-33.968-.59-7.517-5.218-11.85-11.316-12.727C47.226.072 46.946.012 39.776 0 14.343.012 8.768-1.12 3.75 4.082z"></path><path fill="#fff" d="M29.995 7.848c-9.078 0-17.698-.808-20.99 7.642-1.36 3.49-1.162 8.023-1.162 14.513 0 5.695-.183 11.047 1.162 14.51 3.285 8.455 11.975 7.645 20.985 7.645 8.692 0 17.655.905 20.988-7.645 1.362-3.525 1.162-7.99 1.162-14.51 0-8.655.477-14.243-3.72-18.438-4.25-4.25-9.998-3.717-18.435-3.717h.01zM28.01 11.84c18.935-.03 21.345-2.135 20.015 27.108-.472 10.342-8.347 9.207-18.027 9.207-17.65 0-18.158-.505-18.158-18.162 0-17.863 1.4-18.143 16.17-18.158v.005zm13.81 3.678a2.658 2.658 0 1 0 0 5.315 2.658 2.658 0 0 0 0-5.315zm-11.825 3.107c-6.283 0-11.375 5.095-11.375 11.378 0 6.282 5.092 11.375 11.375 11.375s11.372-5.093 11.372-11.375c0-6.283-5.09-11.378-11.372-11.378zm0 3.993c9.762 0 9.775 14.77 0 14.77-9.76 0-9.775-14.77 0-14.77z"></path></g></symbol><symbol id="icon-my" viewBox="0 0 104 60"><path fill="#FF2D39" d="M43.337 32.986c-4.22 5.624-7.886 4.244-10.833-1.325a32.222 32.222 0 0 1-4.034 3.468c-3.11 1.947-6.444.122-6.65-3.572-.072-1.366 0-2.755-.063-4.144a4.327 4.327 0 0 0-.623-1.366c-.468.236-1.141.354-1.369.735-.536.999-1 2.038-1.378 3.105-.55 1.316-1.037 2.673-1.619 3.953a2.997 2.997 0 0 1-3.456 1.665 2.704 2.704 0 0 1-2.447-2.714c-.105-1.77.095-3.562 0-5.342a6.35 6.35 0 0 0-.582-1.688c-.478.395-1.164.685-1.41 1.19-.932 2.019-1.765 4.202-2.697 6.271a7.056 7.056 0 0 1-1.164 1.947 2.749 2.749 0 1 1-4.77-1.303 3.798 3.798 0 0 1-.156-.898c0-4.144-.136-8.364-.063-12.549a5.762 5.762 0 0 1 1.037-3.104 5.01 5.01 0 0 1 2.647-1.761c1.596-.427 2.387.331 2.46 2.07.064 1.334 0 2.682 0 4.025l.696.195c.51-.495.973-1.03 1.391-1.607.874-1.43 1.629-2.94 2.502-4.38a2.927 2.927 0 0 1 3.506-1.51 2.703 2.703 0 0 1 2.074 2.99v4.494l.591.186c.419-.377.814-.785 1.174-1.221 1.246-1.48 2.405-3.046 3.693-4.484a5.342 5.342 0 0 1 1.96-1.407 3.029 3.029 0 0 1 4.316 3.231c-.21 3.005-.396 6.005-.56 9.01-.004.544.023 1.093.082 1.633a6.221 6.221 0 0 0 4.243-4.97c.155-2.478.455-4.942.9-7.384a3.246 3.246 0 0 1 2.957-2.723 3.485 3.485 0 0 1 3.53 1.366 3.9 3.9 0 0 1 .081 4.357c-1.246 2.07-1.164 4.316-.882 6.531a3.455 3.455 0 0 0 1.496 2.383c1.133.55 2.074-.445 2.52-1.439a63.385 63.385 0 0 0 2.073-6.213c.437-1.462.614-3.005 1.037-4.453.642-2.02 2.074-2.909 3.798-2.505a3.6 3.6 0 0 1 2.697 4.071c-.123 1.035-.528 1.965-.687 2.973-.5 3.046-.932 6.1-1.423 9.318 2.346-.736 4.21-1.366 6.121-1.875a9.66 9.66 0 0 1 2.729-.177c1.724 0 2.533.858 3.11 2.805 1.897 6.14 6.008 9.817 12.366 10.884 9.15 1.543 17.865-6.65 16.955-15.872-.064-.612-.145-1.22-.186-1.833a3.107 3.107 0 0 1 2.373-3.7 3.114 3.114 0 0 1 3.78 2.96c1.255 8.387-1.392 15.354-8.114 20.519-9.26 7.044-22.49 5.26-29.547-3.98a21.46 21.46 0 0 1-1.579-2.388c-1.423-2.464-1.878-2.61-4.461-1.375a4.4 4.4 0 0 1-.414.209c-2.583.962-3.547 2.773-3.788 5.56a83.443 83.443 0 0 1-2.074 13.098c-1.392 5.496-4.762 6.472-9.337 3.104-5.653-4.112-6.69-10.466-2.365-15.862a36.583 36.583 0 0 1 6.299-5.755 3.224 3.224 0 0 0 1.537-3.427zM42.91 43.28l-.642-.282a38.22 38.22 0 0 0-2.447 3.695 3.108 3.108 0 0 0 .696 3.667c.664.713 1.351.912 1.538-.354.336-2.274.536-4.48.855-6.726z"></path><path fill="#FF2D39" d="M86.56 10.021a6.215 6.215 0 0 1 2.374-5.664c1.288-1.148 2.438-2.473 3.716-3.644A5.489 5.489 0 0 1 94.205 0c.228.477.387.98.478 1.502.064 1.834.05 3.667 0 5.51 0 1.285.569 1.852 1.856 1.843h5.666c.473.081.933.236 1.36.454a4.582 4.582 0 0 1-.614 1.438c-1.505 1.593-3.11 3.105-4.639 4.67a4.604 4.604 0 0 1-4.066 1.358 5.71 5.71 0 0 0-5.448 2.246c-1.61 1.843-3.497 3.436-5.19 5.229a2.956 2.956 0 0 0-.736 1.956c.269 3.572-2.42 6.68-5.994 6.944-3.58.267-6.695-2.415-6.958-5.982a5.517 5.517 0 0 1-.014-.672c.123-3.513 3.079-6.263 6.6-6.14.176.004.358.018.536.04.9.15 1.819-.181 2.42-.871 1.732-1.802 3.474-3.604 5.343-5.27 1.36-1.157 2.192-2.4 1.755-4.234z"></path><path fill="#FF2D39" d="M57.354 17.94c.177-.548.4-1.08.664-1.592C62.51 8.628 71.375 4.543 80.18 6.14c2.146.413 3.36 1.865 3.051 3.667-.309 1.802-1.941 2.877-4.152 2.473a15.002 15.002 0 0 0-15.426 6.804 9.348 9.348 0 0 1-.933 1.398 2.943 2.943 0 0 1-3.497.758c-1.237-.523-1.892-1.526-1.87-3.3z"></path></symbol><symbol id="icon-ok" viewBox="0 0 38 60"><path fill="#FF9800" d="M19 32.47c8.966 0 16.235-7.269 16.235-16.235C35.235 7.268 27.966 0 19 0S2.765 7.269 2.765 16.235C2.776 25.197 10.038 32.459 19 32.47zm0-24.977a8.742 8.742 0 1 1 0 17.484 8.742 8.742 0 0 1 0-17.484z"></path><path fill="#FF9800" d="M34.903 40.162a6.29 6.29 0 0 0 2.83-5.245 4.53 4.53 0 0 0-2.54-4.133 4.745 4.745 0 0 0-4.996.47 19.005 19.005 0 0 1-22.391 0 4.77 4.77 0 0 0-4.996-.47 4.536 4.536 0 0 0-2.542 4.13 6.296 6.296 0 0 0 2.83 5.246 28.833 28.833 0 0 0 7.318 3.497c.44.136.893.263 1.36.38l-7.547 7.38a4.995 4.995 0 1 0 7.078 7.048L19 50.503l7.708 7.977a4.995 4.995 0 1 0 7.053-7.073l-7.535-7.373c.468-.12.923-.248 1.366-.382a28.724 28.724 0 0 0 7.31-3.49z"></path></symbol><symbol id="icon-seo" viewBox="0 0 80 80"><rect width="80" height="80" fill="#F8FAFF" rx="40"></rect><path fill="#8BAFE7" d="M53.15 50.034l-4.75-3.493c1.816-2.096 2.794-4.89 2.794-7.965C51.194 31.589 45.605 26 38.618 26a12.524 12.524 0 0 0-12.576 12.576c0 6.987 5.59 12.576 12.576 12.576 3.074 0 5.73-1.118 7.965-2.795l3.493 4.89c.839.979 2.376.979 3.214.14.978-.977.839-2.515-.14-3.353zm-4.89-10.06a9.493 9.493 0 0 1-8.244 8.244v-5.45H37.22v5.45c-4.332-.56-7.685-4.053-8.244-8.245h5.45V37.18h-5.45a9.493 9.493 0 0 1 8.244-8.245v5.45h2.795v-5.45c4.331.56 7.685 4.053 8.244 8.245h-5.45v2.794h5.45z"></path><path fill="#8BAFE7" d="M38.618 39.973a1.397 1.397 0 1 0 0-2.794 1.397 1.397 0 0 0 0 2.794z"></path></symbol><symbol id="icon-smm" viewBox="0 0 80 80"><rect width="80" height="80" fill="#F8FAFF" rx="40"></rect><path fill="#8BAFE7" d="M42.118 26c-1.12 0-2.1.98-2.1 2.1v.7l-7 4.2v14l7 4.2v.7c0 1.12.98 2.1 2.1 2.1s2.1-.98 2.1-2.1V28.1c0-1.12-.98-2.1-2.1-2.1zM30.218 33h-4.2v14h4.2V33zM49.678 29.08c-.56-.56-1.4-.56-1.96 0s-.56 1.4 0 1.96c4.62 4.62 4.62 12.18 0 16.8-.56.56-.56 1.54 0 1.96.98.7 1.68.14 1.96 0 5.74-5.74 5.74-15.12 0-20.72z"></path></symbol><symbol id="icon-target" viewBox="0 0 80 80"><rect width="80" height="80" fill="#F8FAFF" rx="40"></rect><g fill="#8BAFE7" clip-path="url(#clip0)"><path d="M47.56 38.46l-2.24 2.24c.14.7.28 1.4.28 2.1 0 4.62-3.78 8.4-8.4 8.4-4.62 0-8.4-3.78-8.4-8.4 0-4.62 3.78-8.4 8.4-8.4.7 0 1.54.14 2.1.28l2.24-2.24c-1.26-.56-2.8-.84-4.34-.84-6.16 0-11.2 5.04-11.2 11.2C26 48.96 31.04 54 37.2 54c6.16 0 11.2-5.04 11.2-11.2 0-1.54-.28-3.08-.84-4.34z"></path><path d="M48.4 31.6V26l-4.2 4.2v3.64l-4.2 4.2c-.84-.56-1.82-.84-2.8-.84-3.08 0-5.6 2.52-5.6 5.6 0 3.08 2.52 5.6 5.6 5.6 3.08 0 5.6-2.52 5.6-5.6 0-.98-.28-1.96-.84-2.8l4.2-4.2h3.64l4.2-4.2h-5.6zm-11.2 14c-1.54 0-2.8-1.26-2.8-2.8 0-1.54 1.26-2.8 2.8-2.8.28 0 .42 0 .7.14l-1.68 1.68c-.56.56-.56 1.4 0 1.96s1.4.56 1.96 0l1.68-1.68c.14.28.14.42.14.7 0 1.54-1.26 2.8-2.8 2.8z"></path></g></symbol><symbol id="icon-vk" viewBox="0 0 60 60"><g clip-path="url(#clip0)"><path fill="#4B729F" d="M49.788 32.57c-.97-1.225-.693-1.77 0-2.865.012-.012 8.02-11.077 8.845-14.83l.005-.002c.41-1.368 0-2.373-1.983-2.373h-6.56c-1.67 0-2.44.863-2.852 1.828 0 0-3.34 7.995-8.066 13.177-1.524 1.498-2.23 1.978-3.062 1.978-.41 0-1.047-.48-1.047-1.848V14.872c0-1.64-.468-2.372-1.85-2.372H22.901c-1.047 0-1.67.765-1.67 1.477 0 1.556 2.363 1.913 2.608 6.288v9.492c0 2.08-.378 2.463-1.215 2.463-2.23 0-7.643-8.027-10.85-17.215-.648-1.783-1.28-2.503-2.963-2.503H2.25c-1.873 0-2.25.863-2.25 1.828 0 1.705 2.23 10.182 10.37 21.383C15.795 43.358 23.435 47.5 30.385 47.5c4.177 0 4.687-.92 4.687-2.502 0-7.305-.377-7.995 1.715-7.995.97 0 2.64.48 6.54 4.167 4.458 4.372 5.19 6.33 7.686 6.33h6.56c1.87 0 2.817-.92 2.272-2.735-1.248-3.818-9.678-11.67-10.057-12.195z"></path></g></symbol></svg>
+    </div>
+
+    <main>
+      <section class="intro section mdc-layout-grid">
+        <div class="section__wrapper mdc-layout-grid__inner">
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid-gutter-desktop">
+            <p class="intro__desc">
+              <span>Мы&nbsp;продвигаем</span> курсы красоты в&nbsp;интернете
+            </p>
+
+            <h1 class="intro__title">"ПоискОптим" - специализированное маркетинговое агентство по рекламе школ&nbsp;красоты</h1>
+
+            <a class="intro__link main-link" href="tel:79816929986">+7 (981) 692-99-86</a>
+          </div>
+
+          <div class="section__image mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <img src="assets/header-img.svg" alt="intro_img">
+          </div>
+        </div>
+      </section>
+
+      <section class="efficiency section section--grey mdc-layout-grid">
+        <div class="section__wrapper ">
+          <h2 class="section__title section__title--center">
+            Средние показатели <span>нашей эффективности</span>
+          </h2>
+
+          <ul class="efficiency__list mdc-layout-grid__inner">
+            <li class="efficiency__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+
+              <h3 class="efficiency__item-name">
+                Контекстная реклама
+              </h3>
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                   6,2 %
+                </p>
+                <p class="efficiency__item-text">
+                   Конверсия лендинга
+                </p>
+              </div>
+
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                  322,58 ₽
+                </p>
+                <p class="efficiency__item-text">
+                  Стоимость лида
+                </p>
+              </div>
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                  921,66 ₽
+                </p>
+                <p class="efficiency__item-text">
+                  Стоимость клиента
+                </p>
+              </div>
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                  6,14 %
+                </p>
+                <p class="efficiency__item-text">
+                  Затраты на рекламу
+                </p>
+              </div>
+            </li>
+            <li class="efficiency__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">           
+              <h3 class="efficiency__item-name">
+                Реклама в соцсетях
+              </h3>
+
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                   5,2 %
+                </p>
+                <p class="efficiency__item-text">
+                   Конверсия лендинга
+                </p>
+             </div>
+             <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                   134,62 ₽
+                </p>
+                <p class="efficiency__item-text">
+                   Стоимость лида
+                </p>
+             </div>
+             <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                   1180,88 ₽
+                </p>
+                <p class="efficiency__item-text">
+                   Стоимость клиента
+                </p>
+             </div>
+             <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                   7,87 %
+                </p>
+                <p class="efficiency__item-text">
+                   Затраты на рекламу
+                </p>
+             </div>
+            </li>
+            <li class="efficiency__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+              <h3 class="efficiency__item-name">
+                SEO
+              </h3>
+
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                   50,5 ₽
+                </p>
+                <p class="efficiency__item-text">
+                   Стоимость лида
+                </p>
+              </div>
+              <div class="efficiency__item-content">
+                  <p class="efficiency__item-stat">
+                    631,25 ₽
+                  </p>
+                  <p class="efficiency__item-text">
+                    Стоимость клиента
+                  </p>
+              </div>
+              <div class="efficiency__item-content">
+                  <p class="efficiency__item-stat">
+                    4,17 %
+                  </p>
+                  <p class="efficiency__item-text">
+                    Затраты на рекламу
+                  </p>
+              </div>
+            </li>
+            <li class="efficiency__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+              <h3 class="efficiency__item-name">
+                SMM
+              </h3>
+
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                   52,4 ₽
+                </p>
+                <p class="efficiency__item-text">
+                   Стоимость лида
+                </p>
+              </div>
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                  748,57 ₽
+                </p>
+                <p class="efficiency__item-text">
+                  Стоимость клиента
+                </p>
+              </div>
+              <div class="efficiency__item-content">
+                <p class="efficiency__item-stat">
+                  4,99 %
+                </p>
+                <p class="efficiency__item-text">
+                  Затраты на рекламу
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section mdc-layout-grid">
+        <div class="section__wrapper mdc-layout-grid__inner">
+          
+          <div class="section__image section__image--top section__image--top-right mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <img src="assets/tablet.svg" alt="intro_img">
+          </div>
+
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid-gutter-desktop">
+            <h2 class="section__title">
+              Вы получаете <span>готовые наработки</span> по рекламе школ красоты
+            </h2>
+
+            <p class="section__text--bold">
+              На профессиональном жаргоне это называется "связки". А именно:
+            </p>
+
+            <ul class="section__list">
+              <li class="section__item">
+                Способы таргетирования
+              </li>
+              <li class="section__item">
+                Объявления
+              </li>
+              <li class="section__item">
+                Лендинги
+              </li>
+            </ul>
+
+            <p class="section__text--bold">
+              Связки отработаны, и они работают хорошо. Мы адаптируем их под Вас:
+            </p>
+
+            <ul class="section__list">
+              <li class="section__item section__item--line">
+                 Изменим контактные данные
+              </li>
+              <li class="section__item section__item--line">
+                 Учтем географический таргетинг
+              </li>
+              <li class="section__item section__item--line">
+                 Учтем специфику
+              </li>
+           </ul>
+
+           <p class="section__text--bold">
+              Т.е. то, что отлично работает для школ красоты в другом городе, 
+              мы возьмем и нацелим именно на Ваших потенциальных клиентов.
+            </p>
+            <a class="main-link" href="#">
+                Узнать больше
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="segmentation section section--grey mdc-layout-grid">
+        <div class="section__wrapper mdc-layout-grid__inner">
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+              <h2 class="segmentation__title section__title">
+                Максимальную <span>сегментация трафика</span>
+              </h2>
+
+              <p class="section__text">
+                Настройка такой рекламы очень непроста. Для Яндекса нужно пробовать несколько различных
+                форматов:
+                текстово-графическое объявление на поиске, баннер поиске, баннер на главных страницах Яндекса,
+                баннерная
+                реклама на сайтах партеров с оплатой за клики, медийная реклама с оплатой за показы. Плюс
+                реклама в Google -
+                еще примено столько же рекламных форматов. Итого десяток мест, где надо прописать найденное
+                ключевое слово.
+              </p>
+
+              <a class="main-link main-link--arrow" href="#contacts">
+                Узнать показатели эффективности
+              </a>
+          </div>
+
+          <div class="section__image section__image--top section__image--top-left mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <img src="assets/segmentation.svg" alt="segmentation_img">
+          </div>
+        </div>
+    </section>
+
+    <section class="complex section mdc-layout-grid">
+      <div class="section__wrapper mdc-layout-grid__inner">
+        <div class="section__image section__image--hidden mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <img src="assets/graph.svg" alt="Изображение графика">
+        </div>
+        <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h2 class="section__title">
+            <span>Комплексный</span> подход
+          </h2>
+          <p class="section__text--bold">
+            Для школ красоты мы выполняем:
+          </p>
+
+          <ul class="section__list">
+            <li class="section__item">
+              Поисковое продвижение (SEO)
+           </li>
+           <li class="section__item">
+              Настройку контекстной рекламы
+           </li>
+           <li class="section__item">
+              Продвижение в социальных сетях (SMM)
+           </li>
+           <li class="section__item">
+              Привлечение клиентов из других источников <br>
+              (например, Яндекс.Карты, справочники)
+           </li>
+           <li class="section__item">
+              Управление репутацией <br>
+              (отслеживаем негативные отзывы и реагируем на них и т.п.)
+           </li>
+          </ul>
+
+          <a class="main-link main-link--phone" href="#">
+            Заказать обратный звонок
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="interaction section section--grey mdc-layout-grid">
+      <div class="section__wrapper  mdc-layout-grid__inner">
+        <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <h2 class="interaction__title section__title">
+              <span>Плотное взаимодействие</span> c Вашим отделом продаж
+            </h2>
+  
+            <p class="section__text">
+              Чтобы получить реального клиента из интернета, необходимо еще правильно обработать заявки. Да,
+              мы отвечаем
+              за конверсию объявления и лендинга. Но наша деятельность не заканчивается только этим. Как
+              правило, у нас
+              есть доступ в CRM клиента. И если мы видим, что на заявку поздно реагируют или неправильно
+              реагируют, мы об
+              этом обязательно скажем. Так мы помогаем поднять конверсию отдела продаж, получаем обратную
+              связь и от этого
+              лучше настраиваем рекламу.
+            </p>
+  
+            <a class="main-link main-link--phone" href="#contacts">
+              Заказать обратный звонок
+            </a>
+        </div>
+  
+        <div class="section__image section__image--top section__image--top-right mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <img src="assets/interaction.svg" alt="interaction_img">
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation section mdc-layout-grid">
+      <div class="section__wrapper mdc-layout-grid__inner">
+        <div class="section__picture mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <picture>
+            <source srcset="images/director.webp">
+            <img src="images/director.jpg" alt="">
+          </picture>
+        </div>
+
+        <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <h2 class="presentation__title section__title">
+            Дональд Трамп <b>Директор маркетингового агентства&nbsp;"ПоискОптим"</b>
+          </h2>
+
+          <p class="section__text">
+            Наше агентство не обещает секретных методик продвижения. Мы просто старательно выполняем свою
+            работу. Но у
+            нас многолетний опыт именно по курсам красоты. У кого такого опыта нет, потратит на его
+            приобретение не один
+            год. А мы нарабатываем лучшие практики и потом просто переносим их на Ваш город. Т.е. чисто
+            географически
+            разносим по городам. В одном городе мы не рекламируем одну услугу для разных клиентов, чтобы не
+            устраивать
+            конкуренцию между ними. А пока Вы сравниваете, Вы попросите, пожалуйста, нас составить для Вас
+            медиа-план. Я
+            уверен, Вам он понравится.
+          </p>
+
+          <a class="main-link main-link--arrow" href="#contacts">
+            Получить медиаплан продвижения
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons section section--grey mdc-layout-grid">
+      <div class="section__wrapper">
+        <h2 class="reasons__title visually-hidden">
+          Причины работы с нами
+        </h2>
+        <ul class="reasons__list mdc-layout-grid__inner">
+          <li class="reasons__item mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+            <img src="assets/timer.svg" alt="Таймер" width="60" height="60">
+            <h3 class="reasons__title">
+              Отсутствие достаточного опыта
+            </h3>
+            <p class="section__text reasons__desc">
+                Если нет опыта именно по школам красоты, то рекламный бюджет будет "слит".
+            </p>
+          </li>
+          <li class="reasons__item mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+            <img src="assets/list-icon.svg" alt="Список" width="60" height="60">
+            <h3 class="reasons__title">
+              Отсутствие специализации
+            </h3>
+            <p class="section__text reasons__desc">
+                Первый попавшийся сотрудник будет набираться опыта за Ваш счет, а потом уволится.
+            </p>
+          </li>
+          <li class="reasons__item mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+            <img src="assets/graphic.svg" alt="График" width="60" height="60">
+            <h3 class="reasons__title">
+              Гиперсегментация трафика
+            </h3>
+            <p class="section__text reasons__desc">
+                Если кластеры ключевых слов слишком крупные, эффективность рекламы сильно меньше.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="promote section mdc-layout-grid">
+      <div class="section__wrapper">
+        <h2 class="section__title section__title--center">
+            <span>Продвигаем</span> школы красоты
+        </h2>
+        <ul class="promote__list mdc-layout-grid__inner"> 
+          <li class="promote__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="promote__link" aria-label="Instagram">
+              <svg class="promote__item-icon" width="60" height="60">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="promote__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="promote__link" aria-label="ВКонтакте">
+              <svg class="promote__item-icon" width="60" height="60">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="promote__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="promote__link" aria-label="Одноклассники">
+              <svg class="promote__item-icon" width="60" height="60">
+                <use xlink:href="#icon-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="promote__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="promote__link" aria-label="Google">
+              <svg class="promote__item-icon" width="60" height="60">
+                <use xlink:href="#icon-google"></use>
+              </svg>
+            </a>
+          </li>
+          <!--<li class="promote__item mdc-layout-grid__cell">
+            <a href="#" class="promote__link" aria-label="Яндекс">
+              <svg class="promote__item-icon" width="60" height="60">
+                <use xlink:href="#icon-yandex"></use>
+              </svg>
+            </a>
+          </li>-->
+          <li class="promote__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="promote__link">
+              <svg class="promote__item-icon" width="60" height="60">
+                <use xlink:href="#icon-my"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="plan section mdc-layout-grid">
+      <div class="plan__wrapper section__wrapper">
+         <h2 class="section__title section__title--center">
+            <span>Приведем клиентов</span> в Вашу школу красоты
+         </h2>
+
+         <ul class="plan__list mdc-layout-grid__inner">
+            <li class="plan__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+
+              <svg class="plan__item-icon" width="80" height="80">
+                <use xlink:href="#icon-target"></use>
+              </svg>
+
+              <p class="plan__desc">
+                Контекстная реклама
+             </p>
+            </li>
+            <li class="plan__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+
+              <svg class="plan__item-icon" width="80" height="80">
+                <use xlink:href="#icon-smm"></use>
+              </svg>
+
+              <p class="plan__desc">
+                SMM
+             </p>
+            </li>
+            <li class="plan__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+
+              <svg class="plan__item-icon" width="80" height="80">
+                <use xlink:href="#icon-seo"></use>
+              </svg>
+
+              <p class="plan__desc">
+                SEO
+             </p>
+            </li>
+            <li class="plan__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+
+              <svg class="plan__item-icon" width="80" height="80">
+                <use xlink:href="#icon-cup"></use>
+              </svg>
+
+              <p class="plan__desc">
+                Управление репутацией
+             </p>
+            </li>
+         </ul>
+      </div>
+   </section>
+
+   <section class="clients section section--grey mdc-layout-grid">
+    <div class="clients__wrapper section__wrapper">
+       <h2 class="section__title section__title--center">
+          Некоторые из <span>наших клиентов</span>
+       </h2>
+
+       <ul class="clients__list mdc-layout-grid__inner">
+         <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+           <picture>
+              <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+            
+              <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+              <img src="assets/aristek.jpg" alt="Образовательный центр 'Аристек'">
+            </picture>
+         </li>
+         <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+          <picture>
+             <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+           
+             <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+             <img src="assets/maritsa.jpg" alt="Maritsa">
+           </picture>
+          </li>
+          <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <picture>
+              <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+            
+              <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+              <img src="assets/nail.jpg" alt="Movie nail bar">
+            </picture>
+          </li>
+          <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <picture>
+               <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+             
+               <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+               <img src="assets/maritsa.jpg" alt="Maritsa">
+            </picture>
+          </li>
+
+          <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <picture>
+               <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+             
+               <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+               <img src="assets/aristek.jpg" alt="Образовательный центр 'Аристек'">
+             </picture>
+          </li>
+          <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+           <picture>
+              <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+            
+              <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+              <img src="assets/maritsa.jpg" alt="Maritsa">
+            </picture>
+           </li>
+           <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+             <picture>
+               <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+             
+               <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+               <img src="assets/nail.jpg" alt="Movie nail bar">
+             </picture>
+           </li>
+           <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+             <picture>
+                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+              
+                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+                <img src="assets/maritsa.jpg" alt="Maritsa">
+             </picture>
+           </li>
+
+           <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+            <picture>
+               <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+             
+               <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+               <img src="assets/aristek.jpg" alt="Образовательный центр 'Аристек'">
+             </picture>
+          </li>
+          <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+           <picture>
+              <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+            
+              <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+              <img src="assets/maritsa.jpg" alt="Maritsa">
+            </picture>
+           </li>
+           <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+             <picture>
+               <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+             
+               <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+               <img src="assets/nail.jpg" alt="Movie nail bar">
+             </picture>
+           </li>
+           <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
+             <picture>
+                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+              
+                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр 'Аристек'">-->
+                <img src="assets/maritsa.jpg" alt="Maritsa">
+             </picture>
+           </li>
+        </ul>
+    </div>
+ </section>
+
+      <section class="team section mdc-layout-grid">
+        <div class="team__wrapper section__wrapper">
+          <h2 class="section__title section__title--center">
+            <span>Ключевые игроки</span> нашей команды
+          </h2>
+
+          <ul class="team__list mdc-layout-grid__inner">
+            <li class="team__person mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
+              <picture>
+                  <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
+                
+                  <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
+                  <img src="assets/team-1.jpg" alt="Руководитель проекта">
+              </picture>
+              <div class="team__person-desc">
+                <p class="team__person-name">Юрий Акиншин</p>
+                <p class="team__person-position section__text">Директор</p>
+              </div>
+            </li>
+
+            <li class="team__person mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-desktop">
+              <picture>
+                    <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
+                  
+                    <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
+                    <img src="assets/team-2.jpg" alt="Директор">
+              </picture>
+              <div class="team__person-desc">
+                <p class="team__person-name">Михаил Граблевский</p>
+                <p class="team__person-position section__text">Директор по развитию</p>
+              </div>
+            </li>
+
+            <li class="team__person mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-desktop">
+              <picture>
+                  <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
+                
+                  <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
+                  <img src="assets/team-3.jpg" alt="Руководитель проекта">
+              </picture>
+              <div class="team__person-desc">
+                <p class="team__person-name">Кирилл Назаров</p>
+                <p class="team__person-position section__text">Руководитель проекта</p>
+              </div>
+            </li>
+
+            <li class="team__person mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+              <picture>
+                  <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
+                
+                  <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
+                  <img src="assets/team-4.jpg" alt="Руководитель проекта">
+              </picture>
+              <div class="team__person-desc">
+                <p class="team__person-name">Анна Васильева</p>
+                <p class="team__person-position section__text">Руководитель проекта</p>
+              </div>
+            </li>
+
+            <li class="team__person mdc-layout-grid__cell mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-6-desktop">
+              <picture>
+                  <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
+                
+                  <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
+                  <img src="assets/team-5.jpg" alt="Руководитель проекта">
+              </picture>
+              <div class="team__person-desc">
+                <p class="team__person-name">Виктория Блирова</p>
+                <p class="team__person-position section__text">Руководитель проекта</p>
+              </div>
+            </li> 
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer__wrapper mdc-layout-grid">
+        <a href="#" class="main-footer__logo">
+          <img src="assets/logo.svg" width="193" height="41" alt="логотип">
+        </a>
+        <ul class="main-footer__list mdc-layout-grid__inner">
+          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="main-footer__link">Почему мы</a>
+          </li>
+          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="main-footer__link">Средние показатели эффективности</a>
+          </li>
+          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="main-footer__link">Наши клиенты</a>
+          </li>
+          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="main-footer__link">Команда</a>
+          </li>
+          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-4-large-tablet mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="main-footer__link">Контакты</a>
+          </li>
+          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
+            <a href="#" class="main-footer__link">Обратная связь</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

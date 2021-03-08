@@ -1,0 +1,42 @@
+//fonts
+
+$reg: "Rubik";
+$med: "Rubik-Medium";
+
+// work
+
+$outline: 1px solid red;
+
+// widths
+
+$desktop: 1140px;
+$lg-desktop: 1440px;
+$tablet: 960px;
+$sm-tablet: 840px;
+$large-phone: 600px;
+$max-page-width: 1600px;
+
+$section_padding: 5rem 2rem;
+
+// colors
+
+$col_base: #4f5665;
+$col_grey: #4f5665;
+$col_lightgrey: #f8faff;
+$col_white: #ffffff;
+$col_black: #0b132a;
+$col_blue: #2573e8;
+$col_list_brd: #8bafe7;
+$col_list_brd-grey: #e9e9e9;
+
+// components
+
+// effects
+
+$transition_rules: 0.3s 0.05s ease-in;
+$box-shadow_base: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+// retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

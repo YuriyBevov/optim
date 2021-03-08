@@ -1,0 +1,60 @@
+.plan {
+    &__desc {       
+        font-size: 2.4rem;
+        line-height: 3rem;
+        text-align: center;
+        color: $col_black;
+    }
+
+    &__item {
+        position: relative;
+        @include flex-col();
+        align-items: center;
+        padding: 1rem 5rem;
+
+        box-shadow: $box-shadow_base;
+
+        &-icon {
+            @include flex-row();
+            justify-content: center;
+
+            margin-bottom: 2rem;
+        }
+
+        &:not(:last-child):after {
+            position: absolute;
+            top: 45px;
+            right: -65px;
+            content: '';
+            width: 10rem;
+            height: 1.1rem;
+            background-image: url(../assets/arrow-long.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        @media(max-width: $sm-tablet) {
+            &:nth-child(2n) {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        @media(max-width: $large-phone) {
+            &:not(:last-child):after {
+                transform: rotate(90deg);
+                top: 100%;
+                right: -1rem;
+            }
+
+            &:nth-child(2n) {
+                &:after {
+                    display: block;
+                    left: 1rem;
+                }
+            }
+        }
+        
+    }
+}

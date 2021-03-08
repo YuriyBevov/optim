@@ -1,0 +1,30 @@
+.team {
+
+    &__person {
+        @include flex-col();
+        align-items: center;
+
+        &-desc {
+            @include flex-col();
+            align-items: center;
+        }
+
+        &-name {
+            font-family: $med;
+            font-weight: 500;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+            color: $col_black;
+        }
+
+        picture {
+            width: 160px;
+            height: 160px;
+
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }  
+}
