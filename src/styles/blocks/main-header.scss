@@ -1,0 +1,10 @@
+.main-header {
+  
+    &__wrapper {
+        @include flex-row();        
+        @include section_padding();
+
+        max-width: $max-page-width;
+    }
+
+}

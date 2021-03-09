@@ -57,11 +57,14 @@ p,h1,h2,h3,h4,h5,h6 {
 }
 
 .main-link {
+  display: inline-block;
   position: relative;
   font-size: 1.6rem;
   text-align: center;
   padding: 2rem 3rem;
   width: fit-content;
+  min-width: 4rem;
+  min-height: 4rem;
 
   border-radius: 1rem;
   color: #fff;
@@ -75,6 +78,16 @@ p,h1,h2,h3,h4,h5,h6 {
   &--phone {
       padding-left: 5rem;
   }*/
+
+  &--white {
+    border: 1px solid $col_blue;
+    color: $col_blue;
+    background-color: transparent;
+  }
+
+  &--small {
+    padding: 1rem 2rem;
+  }
 
  
 

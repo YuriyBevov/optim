@@ -13,17 +13,51 @@
       <include src="build/assets/svg-sprite.svg"></include>
     </div>
 
+    <header class="main-header">
+      <div class="main-header__wrapper mdc-layout-grid">
+        <nav class="nav mdc-layout-grid__inner">
+          <div class="nav__wrapper mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-12-desktop">
+            <a href="#" class="nav__logo">
+              <img src="assets/logo.svg" alt="логотип">
+            </a>
+  
+            <ul class="nav__list">
+              <li class="nav__item">
+                  <a class="nav__link" href="#">Почему мы</a>
+              </li>
+              <li class="nav__item">
+                  <a class="nav__link" href="#clients">Наши клиенты</a>
+              </li>
+              <li class="nav__item">
+                  <a class="nav__link" href="#team">Команда</a>
+              </li>
+              <li class="nav__item">
+                  <a class="nav__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+  
+            <div class="nav__links">
+              <a class="nav__btn nav__btn--collapsed main-link main-link--white main-link--small" href="#contacts">Обратный звонок</a>
+              <a class="nav__btn main-link main-link--small" href="tel:79816929986">+7 (981) 692-99-86</a>
+            </div>
+            <button class="nav__toggle toggle" aria-label="кнопка открытия меню"></button>
+          </div>
+          
+       </nav>
+      </div>
+    </header>
+
     <main>
       <section class="intro section mdc-layout-grid">
         <div class="section__wrapper mdc-layout-grid__inner">
-          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid-gutter-desktop">
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <p class="intro__desc">
               <span>Мы&nbsp;продвигаем</span> курсы красоты в&nbsp;интернете
             </p>
 
             <h1 class="intro__title">"ПоискОптим" - специализированное маркетинговое агентство по рекламе школ&nbsp;красоты</h1>
 
-            <a class="intro__link main-link" href="tel:79816929986">+7 (981) 692-99-86</a>
+            <a class="intro__link main-link main-link--small" href="tel:79816929986">+7 (981) 692-99-86</a>
           </div>
 
           <div class="section__image mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
@@ -693,6 +727,37 @@
           </ul>
         </div>
       </section>
+
+      <section class="info section mdc-layout-grid">
+        <div class="section__wrapper mdc-layout-grid__inner">
+          <div class="info__contacts contacts mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <p class="contacts__item-title">Название</p>
+                <p class="contacts__item-desc">Маркетинговое агентство "ПоискОптим"</p>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__item-title">Телефон</p>
+                <p class="contacts__item-desc">Маркетинговое агентство "ПоискОптим"</p>
+                <a href="tel: 79816929986" class="contacts__item-link">+7 (981) 692-99-86</a>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__item-title">Адрес</p>
+                <p class="contacts__item-desc">Маркетинговое агентство "ПоискОптим"</p>
+                <address class="contacts__item-address">Санкт-Петербург <br> ул. Турбинная, 128, 198095</address>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__item-title">Сотрудничество</p>
+                <a class="contacts__item-link" href='mailto:info@poiskoptim.ru'>info@poiskoptim.ru</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="offer__form">
+
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
@@ -713,7 +778,7 @@
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
             <a href="#" class="main-footer__link">Команда</a>
           </li>
-          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-4-large-tablet mdc-layout-grid__cell--span-2-desktop">
+          <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
             <a href="#" class="main-footer__link">Контакты</a>
           </li>
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">

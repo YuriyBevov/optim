@@ -7,6 +7,9 @@
 @import "common";
 @import "md-layout";
 
+@import "./blocks/main-header";
+@import "./blocks/nav";
+
 @import "./blocks/section";
 @import "./blocks/intro";
 @import "./blocks/reasons";
@@ -14,5 +17,9 @@
 @import "./blocks/clients";
 @import "./blocks/team";
 @import "./blocks/efficiency";
+@import "./blocks/info";
+@import "./blocks/contacts";
+
+@import "./blocks/toggle";
 
 @import "./blocks/main-footer";
