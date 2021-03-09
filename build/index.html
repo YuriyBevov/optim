@@ -4,6 +4,11 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Маркетинговое агенство 'ПоискОптим'">
+      <link rel="preload" href="./fonts/Rubik-Regular.woff" as="font" type="font/woff" crossorigin="">
+      <link rel="preload" href="./fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+      <link rel="preload" href="./fonts/Rubik-Medium.woff" as="font" type="font/woff" crossorigin="">
+      <link rel="preload" href="./fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin="">
       <title>ПоискОптим</title>
 
       <link rel="stylesheet" href="./css/styles.min.css">
@@ -288,7 +293,7 @@
                 ключевое слово.
               </p>
 
-              <a class="main-link main-link--arrow" href="#contacts">
+              <a class="main-link" href="#contacts">
                 Узнать показатели эффективности
               </a>
           </div>
@@ -332,7 +337,7 @@
            </li>
           </ul>
 
-          <a class="main-link main-link--phone" href="#">
+          <a class="main-link" href="#">
             Заказать обратный звонок
           </a>
         </div>
@@ -358,7 +363,7 @@
               лучше настраиваем рекламу.
             </p>
   
-            <a class="main-link main-link--phone" href="#contacts">
+            <a class="main-link" href="#contacts">
               Заказать обратный звонок
             </a>
         </div>
@@ -397,7 +402,7 @@
             уверен, Вам он понравится.
           </p>
 
-          <a class="main-link main-link--arrow" href="#contacts">
+          <a class="main-link " href="#contacts">
             Получить медиаплан продвижения
           </a>
         </div>
@@ -730,31 +735,55 @@
 
       <section class="info section mdc-layout-grid">
         <div class="section__wrapper mdc-layout-grid__inner">
-          <div class="info__contacts contacts mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="info__contacts contacts mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop">
             <ul class="contacts__list">
-              <li class="contacts__item">
-                <p class="contacts__item-title">Название</p>
-                <p class="contacts__item-desc">Маркетинговое агентство "ПоискОптим"</p>
+              <li class="contacts__item contacts__item--name">
+                <p class="contacts__item-title section__text--bold">Название</p>
+                <p class="contacts__item-desc section__text">Маркетинговое агентство "ПоискОптим"</p>
               </li>
-              <li class="contacts__item">
-                <p class="contacts__item-title">Телефон</p>
-                <p class="contacts__item-desc">Маркетинговое агентство "ПоискОптим"</p>
-                <a href="tel: 79816929986" class="contacts__item-link">+7 (981) 692-99-86</a>
+              <li class="contacts__item contacts__item--phone">
+                <p class="contacts__item-title section__text--bold">Телефон</p>
+                <a href="tel: 79816929986" class="contacts__item-link section__text">+7 (981) 692-99-86</a>
               </li>
-              <li class="contacts__item">
-                <p class="contacts__item-title">Адрес</p>
-                <p class="contacts__item-desc">Маркетинговое агентство "ПоискОптим"</p>
-                <address class="contacts__item-address">Санкт-Петербург <br> ул. Турбинная, 128, 198095</address>
+              <li class="contacts__item contacts__item--address">
+                <p class="contacts__item-title section__text--bold">Адрес</p>
+                <address class="contacts__item-address section__text">Санкт-Петербург <br> ул. Турбинная, 128, 198095</address>
               </li>
-              <li class="contacts__item">
-                <p class="contacts__item-title">Сотрудничество</p>
-                <a class="contacts__item-link" href="mailto:info@poiskoptim.ru">info@poiskoptim.ru</a>
+              <li class="contacts__item contacts__item--partnership">
+                <p class="contacts__item-title section__text--bold">Сотрудничество</p>
+                <a class="contacts__item-link section__text" href="mailto:info@poiskoptim.ru">info@poiskoptim.ru</a>
               </li>
             </ul>
           </div>
 
-          <div class="offer__form">
+          <div class="contacts__form mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop">
+            <form id="application-form" class="application-form" method="post">
+ 
+              <h2 class="application-form__title section__title section__title--center">
+                Оставьте заявку
+              </h2>
 
+              <label class="visually-hidden" for="application-form-name">Ваше имя</label>
+              <input type="text" name="user_name" id="application-form-name" placeholder="Имя">
+              
+              <label class="visually-hidden" for="application-form-mail">Ваша почта</label>
+              <input type="text" name="user_mail" id="application-form-mail" placeholder="E-mail">
+              
+              <label class="visually-hidden" for="application-form-phone">Телефон</label>
+              <input type="text" name="user_phone" id="application-form-phone" placeholder="Телефон">
+              
+
+              <textarea id="application-form-msg" placeholder="Сообщение..."></textarea>
+
+              <div class="application-form__container">
+                <input type="checkbox" class="application-form__accept-checkbox visually-hidden" name="accept_rules" id="application-form-accept">
+                <label class="application-form__accept-label" for="application-form-accept">Согласен на обработку персональных данных</label>  
+              </div>
+
+              <button id="application-form__btn" class="main-btn application-form__btn" type="submit">
+                Отправить заявку
+             </button>
+           </form>
           </div>
         </div>
       </section>

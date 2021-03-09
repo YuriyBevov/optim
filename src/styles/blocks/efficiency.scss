@@ -13,7 +13,7 @@
     &__item {
         @include flex-col();
         padding: 0 2rem;
-        
+           
         &-name {
             font-size: 2rem;
             line-height: 2.4rem;

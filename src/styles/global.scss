@@ -58,7 +58,6 @@ p,h1,h2,h3,h4,h5,h6 {
 
 .main-link {
   display: inline-block;
-  position: relative;
   font-size: 1.6rem;
   text-align: center;
   padding: 2rem 3rem;
@@ -70,15 +69,6 @@ p,h1,h2,h3,h4,h5,h6 {
   color: #fff;
   background-color: $col_blue;
 
- // проверить в html!!
-  /*&--arrow {
-      padding-right: 5rem;
-  }
- // проверить в html!!
-  &--phone {
-      padding-left: 5rem;
-  }*/
-
   &--white {
     border: 1px solid $col_blue;
     color: $col_blue;
@@ -88,8 +78,6 @@ p,h1,h2,h3,h4,h5,h6 {
   &--small {
     padding: 1rem 2rem;
   }
-
- 
 
   @media(max-width: $desktop) {
     padding: 1.5rem;
@@ -101,4 +89,23 @@ p,h1,h2,h3,h4,h5,h6 {
   &:focus {
     opacity: 0.8;
   }
+}
+
+.main-btn {
+  font-family: $med;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-align: center;
+  padding: 1.5rem;
+  text-align: center;
+  width: fit-content;
+  min-width: 4rem;
+  min-height: 4rem;
+  border: 0;
+
+  cursor: pointer;
+
+  border-radius: 1rem;
+  color: #fff;
+  background-color: $col_blue;
 }
