@@ -1,10 +1,19 @@
 .main-header {
+    background-color: $col_white;
   
     &__wrapper {
         @include flex-row();        
         @include section_padding();
 
         max-width: $max-page-width;
+    }
+
+    &--sticky {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        padding: 2rem;
     }
 
 }

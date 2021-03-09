@@ -1,0 +1,25 @@
+.quiz {
+
+    &__invitation {
+        padding: 3rem 2rem;
+
+        background-color: $col_white;
+        background-image: url("../assets/quiz.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &-container {
+            
+        }
+
+        box-shadow: $box-shadow_base;
+    }
+
+    &__btn {
+        width: fit-content;
+
+        @media(max-width: $sm-tablet) {
+            padding: 1rem;
+        }
+    }
+}

@@ -108,4 +108,9 @@ p,h1,h2,h3,h4,h5,h6 {
   border-radius: 1rem;
   color: #fff;
   background-color: $col_blue;
+
+  @media(max-width: $sm-tablet) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 }

@@ -1,35 +1,53 @@
-.application-form {
-    @include flex-col();
-    position: relative;
-    z-index: 100;
+.quiz-form {
+    &__content {
+        @include flex-col();
+        align-items: center;
+
+        width: 50%;
+        margin: 0 auto;
+
+        background-color: $col_white;
+        @include section_padding();
+
+        box-shadow: $box-shadow_base;
+
+        background-image: url("../assets/quiz.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+
+    &__title,
+    &__text {
+        text-align: center;
+    }
+
+    label {
+        //text-align: center;
+        margin-bottom: 3rem;
+    }
 
     input {
         font-family: $reg;
         font-size: 1.6rem;
         line-height: 2.7rem;
-        border: 0;
-        padding: 2rem;
+        
+        padding: 1rem 2rem;
         margin-bottom: 2rem;
-        box-shadow: $box-shadow_base;
+        border-radius: 10px;
+        border: 1px solid #AFCDFB;
+
         color: $col_grey;
     }
 
-    textarea {
+    input::placeholder {
         font-family: $reg;
         font-size: 1.6rem;
         line-height: 2.7rem;
-        
-        resize: none;
-        width: 100%;
-        height: 13rem;
-        padding: 2rem;
-        margin-bottom: 2rem;
-
         color: $col_grey;
     }
 
-    &__container {
-        margin-bottom: 2rem;
+    &__btn {
+        padding: 1rem;
     }
 
     &__accept-label {
@@ -70,12 +88,5 @@
         background-color: $col_blue;
         background-image: url("../assets/check.svg");
         background-size: 100%;
-    }
-
-    @media(max-width: $sm-tablet) {
-        &__btn {
-            width: 100%;
-            padding: 1rem;
-        }
     }
 }
