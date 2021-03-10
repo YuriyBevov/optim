@@ -18,12 +18,15 @@ const sourcemap = require("gulp-sourcemaps");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 
-// Css
+// CSS
 
 const css = require("gulp-sass");
 const csso = require("gulp-csso");
-//const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
+const autoprefixer = require("gulp-autoprefixer");
+
+// JS
+
+const webpack = require("webpack-stream");
 
 // IMAGES AND SVG
 
@@ -59,12 +62,20 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(css())
-    //.pipe(postcss([ autoprefixer() ]))
+    .pipe(autoprefixer({
+       cascade: false
+     }))
     .pipe(csso())
     .pipe(rename(PATHS.styles.outputFileName))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest(PATHS.styles.dest))
     .pipe(browserSync.stream());
+};
+
+const js = () => {
+  return gulp.src([PATHS.scripts.inputFileName])
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(gulp.dest(BUILD_PATH));
 };
 
 const server = () => {
@@ -79,6 +90,7 @@ const server = () => {
 
   gulp.watch(PATHS.styles.src, gulp.series(styles, refresh));
   gulp.watch(PATHS.html.srcWatch, gulp.series(html, refresh));
+  gulp.watch(PATHS.scripts.srcWatch, gulp.series(js, refresh));
 };
 
 const refresh = (done) => {
@@ -108,7 +120,7 @@ const sprite = () => {
     .pipe(gulp.dest(PATHS.images.dest));
 };
 
-const build = gulp.series(clean, fonts, sprite, html, styles, images);
+const build = gulp.series(clean, fonts, sprite, html, styles, js, images);
 const start = gulp.series(build, server);
 
 exports.build = build;

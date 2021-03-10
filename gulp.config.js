@@ -27,7 +27,13 @@ const PATHS = {
     dest: `${BUILD_PATH}css/`,
     inputFileName: `${SOURCE_PATH}styles/styles.scss`,
     outputFileName: 'styles.min.css',
-  }
+  },
+
+  scripts: {
+    srcWatch: `${SOURCE_PATH}scripts/**/**/*.js`,
+    inputFileName: `${SOURCE_PATH}scripts/index.js`,
+    dest: `${BUILD_PATH}`,
+  },
 };
 
 module.exports = { PATHS, BUILD_PATH }
