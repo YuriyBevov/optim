@@ -114,3 +114,14 @@ p,h1,h2,h3,h4,h5,h6 {
     line-height: 2rem;
   }
 }
+
+.error-msg {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 1.5rem;
+  color: maroon;
+
+  &--hidden {
+    display: none;
+  }
+}

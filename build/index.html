@@ -42,7 +42,7 @@
               </svg>
             </a>
   
-            <ul class="nav__list">
+            <ul class="nav__list nav__list--closed">
               <li class="nav__item">
                   <a class="nav__link" href="#">Почему мы</a>
               </li>
@@ -237,11 +237,11 @@
       <section class="section mdc-layout-grid">
         <div class="section__wrapper mdc-layout-grid__inner">
           
-          <div class="section__image section__image--top section__image--top-right mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="section__image section__image--top section__image--top-right mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-6-desktop">
             <img src="assets/tablet.svg" alt="intro_img">
           </div>
 
-          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid-gutter-desktop">
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-6-desktop mdc-layout-grid-gutter-desktop">
             <h2 class="section__title">
               Вы получаете <span>готовые наработки</span> по рекламе школ красоты
             </h2>
@@ -292,7 +292,7 @@
 
       <section class="segmentation section section--grey mdc-layout-grid">
         <div class="section__wrapper mdc-layout-grid__inner">
-          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-6-desktop">
             <h2 class="segmentation__title section__title">
               Максимальную <span>сегментация трафика</span>
             </h2>
@@ -313,7 +313,7 @@
             </a>
           </div>
 
-          <div class="section__image section__image--top section__image--top-left mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="section__image section__image--top section__image--top-left mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-6-desktop">
             <img src="assets/segmentation.svg" alt="segmentation_img">
           </div>
         </div>
@@ -321,10 +321,10 @@
 
       <section class="complex section mdc-layout-grid">
         <div class="section__wrapper mdc-layout-grid__inner">
-          <div class="section__image section__image--hidden mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="section__image section__image--top section__image--hidden mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-6-desktop">
             <img src="assets/graph.svg" alt="Изображение графика">
           </div>
-          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-6-desktop">
             <h2 class="section__title">
               <span>Комплексный</span> подход
             </h2>
@@ -361,7 +361,7 @@
 
       <section class="interaction section section--grey mdc-layout-grid">
         <div class="section__wrapper  mdc-layout-grid__inner">
-          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-6-desktop">
             <h2 class="interaction__title section__title">
               <span>Плотное взаимодействие</span> c Вашим отделом продаж
             </h2>
@@ -383,7 +383,7 @@
             </a>
           </div>
     
-          <div class="section__image section__image--top section__image--top-right mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="section__image section__image--top section__image--top-right mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <img src="assets/interaction.svg" alt="interaction_img">
           </div>
         </div>
@@ -532,27 +532,28 @@
             </button>
           </div>
 
-          <form action="#" class="quiz-form">
+          <form action="#" method="POST" class="quiz-form" id="quiz-form" data-modal="modal-quiz">
             <div class="quiz-form__content hidden" data-id="1">
               <p class="section__text">
                  Вопрос 1/5
               </p>
 
               <label for="quiz_city" class="section__title quiz-form__title">Ваш город?</label>
-              <input type="text" name="quiz_city" id="quiz_city" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="quiz_city" id="quiz_city" placeholder="Ваш Ответ...">
 
               <p class="section__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;1%</span>
               </p>
 
               <div class="quiz-form__container">
-                <input type="checkbox" class="quiz-form__accept-checkbox visually-hidden" name="accept_rules" id="quiz-form-accept">
+                <input type="checkbox" class="quiz-form__accept-checkbox form-control visually-hidden" name="accept_rules" id="quiz-form-accept">
                 <label class="quiz-form__accept-label" for="quiz-form-accept">Согласен на обработку персональных данных</label>  
               </div>
 
               <button type="button" class="main-btn quiz-form__btn">
                  Далее
               </button>
+              <span class="error-msg error-msg--hidden">Все поля обязательны для заполнения*</span>
             </div>
 
             <div class="quiz-form__content hidden" data-id="2">
@@ -561,7 +562,7 @@
               </p>
 
               <label for="quiz_courses" class="section__title quiz-form__title">На какие курсы нужно привести клиентов?</label>
-              <input type="text" name="quiz_courses" id="quiz_courses" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="quiz_courses" id="quiz_courses" placeholder="Ваш Ответ...">
 
               <p class="section__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;2%</span>
@@ -570,6 +571,7 @@
               <button type="button" class="main-btn quiz-form__btn">
                  Далее
               </button>
+              <span class="error-msg error-msg--hidden">Все поля обязательны для заполнения*</span>
             </div>
 
             <div class="quiz-form__content hidden" data-id="3">
@@ -578,7 +580,7 @@
               </p>
 
               <label for="quiz_clients" class="section__title quiz-form__title">Сколько нужно клиентов в месяц?</label>
-              <input type="text" name="quiz_clients" id="quiz_clients" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="quiz_clients" id="quiz_clients" placeholder="Ваш Ответ...">
 
               <p class="section__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;3%</span>
@@ -587,6 +589,7 @@
               <button type="button" class="main-btn quiz-form__btn">
                  Далее
               </button>
+              <span class="error-msg error-msg--hidden">Все поля обязательны для заполнения*</span>
             </div>
 
             <div class="quiz-form__content hidden" data-id="4">
@@ -595,7 +598,7 @@
               </p>
 
               <label for="quiz_site" class="section__title quiz-form__title">Сайт компании</label>
-              <input type="text" name="quiz_site" id="quiz_site" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="quiz_site" id="quiz_site" placeholder="Ваш Ответ...">
 
               <p class="section__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;4%</span>
@@ -604,6 +607,7 @@
               <button type="button" class="main-btn quiz-form__btn">
                  Далее
               </button>
+              <span class="error-msg error-msg--hidden">Все поля обязательны для заполнения*</span>
             </div>
 
             <div class="quiz-form__content hidden" data-id="5">
@@ -612,19 +616,20 @@
               </p>
 
               <label for="quiz_phone" class="section__title quiz-form__title">Контактная информация</label>
-              <input type="text" placeholder="Телефон..." name="quiz_phone" id="quiz_phone">
+              <input class="form-control" type="text" placeholder="Телефон..." name="quiz_phone" id="quiz_phone">
               <label for="quiz_email" class="visually-hidden">E-mail</label>
-              <input type="text" placeholder="E-mail..." name="quiz_email" id="quiz_email">
+              <input class="form-control" type="text" placeholder="E-mail..." name="quiz_email" id="quiz_email">
               <label for="quiz_name" class="visually-hidden">Ваше имя</label>
-              <input type="text" placeholder="Имя..." name="quiz_name" id="quiz_name">
+              <input class="form-control" type="text" placeholder="Имя..." name="quiz_name" id="quiz_name">
 
               <p class="section__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;5%</span>
               </p>
-
+             
               <button type="submit" class="main-btn quiz-form__btn quiz-form__btn--submit">
                 Получить скидку !
               </button>
+              <span class="error-msg error-msg--hidden">Все поля обязательны для заполнения*</span>
             </div>
           </form>
         </div>
@@ -689,99 +694,99 @@
           <ul class="clients__list mdc-layout-grid__inner">
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/aristek.jpg" alt="Образовательный центр Аристек">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/maritsa.jpg" alt="Maritsa">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/nail.jpg" alt="Movie nail bar">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/maritsa.jpg" alt="Maritsa">
               </picture>
             </li>
 
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/aristek.jpg" alt="Образовательный центр Аристек">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/maritsa.jpg" alt="Maritsa">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/nail.jpg" alt="Movie nail bar">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/maritsa.jpg" alt="Maritsa">
               </picture>
             </li>
 
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/aristek.jpg" alt="Образовательный центр Аристек">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/maritsa.jpg" alt="Maritsa">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/nail.jpg" alt="Movie nail bar">
               </picture>
             </li>
             <li class="clients__item mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop">
               <picture>
-                <!--<source type="image/webp" srcset="assets/aristek@1x.webp 1x, assets/aristek@2x.webp 2x">
+                <!--<source type="image/webp" srcset="assets/<image_name>@1x.webp 1x, assets/<image_name>@2x.webp 2x">
               
-                <img src="assets/aristek@1x.jpg" srcset="assets/aristek@2x.jpg 2x" alt="Образовательный центр Аристек">-->
+                <img src="assets/<image_name>@1x.jpg" srcset="assets/<image_name>@2x.jpg 2x" alt="<image_desc>">-->
                 <img src="assets/maritsa.jpg" alt="Maritsa">
               </picture>
             </li>
@@ -888,32 +893,34 @@
           </div>
 
           <div class="contacts__form mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop">
-            <form id="application-form" class="application-form" method="post">
+            <form id="application-form" class="application-form" data-modal="modal-thank">
 
               <h2 class="application-form__title section__title section__title--center">
                 Оставьте заявку
               </h2>
 
               <label class="visually-hidden" for="application-form-name">Ваше имя</label>
-              <input type="text" name="user_name" id="application-form-name" placeholder="Имя">
+              <input class="form-control" type="text" name="user_name" id="application-form-name" placeholder="Имя*">
               
               <label class="visually-hidden" for="application-form-mail">Ваша почта</label>
-              <input type="text" name="user_mail" id="application-form-mail" placeholder="E-mail">
+              <input class="form-control" type="text" name="user_mail" id="application-form-mail" placeholder="E-mail*">
               
               <label class="visually-hidden" for="application-form-phone">Телефон</label>
-              <input type="text" name="user_phone" id="application-form-phone" placeholder="Телефон">
+              <input class="form-control" type="text" name="user_phone" id="application-form-phone" placeholder="Телефон*">
               
               <label for="application-form-msg" class="visually-hidden">Оставьте свое сообщение</label>
               <textarea id="application-form-msg" placeholder="Сообщение..."></textarea>
 
               <div class="application-form__container">
-                <input type="checkbox" class="application-form__accept-checkbox visually-hidden" name="accept_rules" id="application-form-accept">
-                <label class="application-form__accept-label" for="application-form-accept">Согласен на обработку персональных данных</label>  
+                <input type="checkbox" class="application-form__accept-checkbox form-control visually-hidden" name="accept_rules" id="application-form-accept">
+                <label class="application-form__accept-label" for="application-form-accept">Согласен на обработку персональных данных*</label>  
               </div>
 
               <button id="application-form__btn" class="main-btn application-form__btn" type="submit">
                 Отправить заявку
               </button>
+              <span class="error-msg error-msg--hidden">Поля обязательны для заполнения *</span>
+
             </form>
           </div>
         </div>
@@ -951,7 +958,7 @@
       </div>
     </footer>
 
-    <div class="modal closed modal-thank section">
+    <div class="modal closed modal-quiz section">
       <div class="modal__wrapper section__wrapper">
         <p class="section__title">
           Скидка на <span>5%</span> получена !
@@ -966,7 +973,7 @@
       </div>
     </div>
 
-    <div class="modal closed modal-callback section">
+    <div class="modal closed modal-thank section">
       <div class="modal__wrapper section__wrapper">
         <p class="section__text">
           Спасибо! Мы свяжемся с Вами в ближайшее время !

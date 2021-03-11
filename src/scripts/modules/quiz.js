@@ -1,5 +1,6 @@
 import { formValidation } from "./formValidation.js";
 import { sendForm } from "./sendForm.js";
+import { formErrorMsg } from "./formErrorMsg.js";
 
 export const quiz = () => {
 
@@ -32,7 +33,7 @@ export const quiz = () => {
     const hideEl = el => {
         el.style.display = 'none';
         el.style.transform = 'translateX(-150%)';
-    } 
+    }
 
     const initApp = () => {
         questions.forEach((el, i) => {
@@ -55,20 +56,23 @@ export const quiz = () => {
 
     let showNextQuestion = () => {
 
-        // тут должна быть валидация !
+        const controls = questions[currentQuestion].querySelectorAll('.form-control');
 
-        formValidation();
+        if(formValidation(controls)) {
 
-        currentQuestion = currentQuestion === finalQuestion ? finalQuestion : currentQuestion + 1;
-        previousQuestion = currentQuestion === 0 ? null : currentQuestion - 1;
+            currentQuestion = currentQuestion === finalQuestion ? finalQuestion : currentQuestion + 1;
+            previousQuestion = currentQuestion === 0 ? null : currentQuestion - 1;
 
-        hideEl(questions[previousQuestion]);
-        showEl(questions[currentQuestion]);
+            hideEl(questions[previousQuestion]);
+            showEl(questions[currentQuestion]);
 
-        nextBtn.removeEventListener('click', showNextQuestion);
-        nextBtn = nextBtns[currentQuestion];
+            nextBtn.removeEventListener('click', showNextQuestion);
+            nextBtn = nextBtns[currentQuestion];
         
-        currentQuestion !== finalQuestion ? nextBtn.addEventListener('click', showNextQuestion) : submitBtn.addEventListener('click', endQuiz);
+            currentQuestion !== finalQuestion ? nextBtn.addEventListener('click', showNextQuestion) : submitBtn.addEventListener('click', endQuiz);
+        } else {
+            formErrorMsg(questions[currentQuestion].querySelector('.error-msg'))
+        }
     }
 
     let refreshQuizData = () => {
@@ -83,10 +87,18 @@ export const quiz = () => {
     let endQuiz = (evt) => {
         evt.preventDefault();
 
-        const modal = document.querySelector('.modal-thank')
+        const controls = questions[currentQuestion].querySelectorAll('.form-control');
 
-        sendForm(evt.target.closest('form'), modal);
-        refreshQuizData();
+        if(formValidation(controls)) {
+            const form = evt.target.closest('form');
+            const dataModal = form.getAttribute('data-modal');
+            const modal = document.querySelector('.' + dataModal)
+
+            sendForm(form, modal);
+            refreshQuizData();
+        } else {
+            formErrorMsg(questions[currentQuestion].querySelector('.error-msg'))
+        }     
     }
 
     initApp();
