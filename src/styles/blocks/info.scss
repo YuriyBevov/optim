@@ -1,3 +1,60 @@
 .info {
-     
+    &__form {
+        position: relative;
+        padding: 3rem;
+        box-shadow: $box-shadow_base;
+
+        &::before,
+        &::after {
+            position: absolute;
+
+            content: '';
+
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        &::before {
+            top: -9rem;
+            left: -10rem;
+
+            width: 34rem;
+            height: 40rem;
+
+            background-image: url("../assets/plane-top.svg");
+
+            @media(max-width: $large-phone) {
+                top: -52rem;
+                left: -5rem;
+                width: 24rem;
+                height: 30rem;
+            }
+        }
+
+        &::after {
+            bottom: -8rem;
+            right: -4rem;
+
+            width: 18rem;
+            height: 30rem;
+
+            transform: rotate(5deg);
+
+            background-image: url("../assets/plane-bottom.svg");
+
+            @media(max-width: $sm-tablet) {
+                display: none;
+            }
+
+            @media(max-width: $large-phone) {
+                display: block;
+                top: -23rem;
+                right: 5rem;
+            }
+        }
+
+        @media(max-width: $sm-tablet) {
+            padding: 1rem;
+        }
+    }
 }
