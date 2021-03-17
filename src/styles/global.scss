@@ -71,7 +71,7 @@ p,h1,h2,h3,h4,h5,h6 {
 
   &--white {
     border: 1px solid $col_black;
-    color: $col_blue;
+    color: $col_black;
     background-color: transparent;
   }
 
@@ -107,7 +107,7 @@ p,h1,h2,h3,h4,h5,h6 {
 
   border-radius: 1rem;
   color: #fff;
-  background-color: $col_blue;
+  background-color: $col_black;
 
   @media(max-width: $sm-tablet) {
     font-size: 1.6rem;
