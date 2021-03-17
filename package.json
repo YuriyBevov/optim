@@ -21,6 +21,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
     "posthtml-include": "^1.6.2",
     "webpack": "^5.24.4",
     "webpack-stream": "^6.1.2"

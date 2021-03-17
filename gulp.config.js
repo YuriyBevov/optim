@@ -11,7 +11,7 @@ const PATHS = {
   images: {
     src: `${SOURCE_PATH}assets/**/*.{png,jpg,svg}`,
     spriteSrc: `${SOURCE_PATH}/assets/svg-sprite/icon-*.svg`,
-
+    webpSrc: `${SOURCE_PATH}assets/**/*.{png,jpg}`,
     dest: `${BUILD_PATH}assets/`,
     spriteFileName: 'svg-sprite.svg',
   },

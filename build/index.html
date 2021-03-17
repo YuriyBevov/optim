@@ -42,23 +42,23 @@
               </svg>
             </a>
   
-            <ul class="nav__list nav__list--closed">
+            <ul class="nav__list">
               <li class="nav__item">
-                  <a class="nav__link" href="#">Почему мы</a>
+                  <a class="nav__link scroll-link" href="#intro">Почему мы</a>
               </li>
               <li class="nav__item">
-                  <a class="nav__link" href="#clients">Наши клиенты</a>
+                  <a class="nav__link scroll-link" href="#clients">Наши клиенты</a>
               </li>
               <li class="nav__item">
-                  <a class="nav__link" href="#team">Команда</a>
+                  <a class="nav__link scroll-link" href="#team">Команда</a>
               </li>
               <li class="nav__item">
-                  <a class="nav__link" href="#contacts">Контакты</a>
+                  <a class="nav__link scroll-link" href="#contacts">Контакты</a>
               </li>
             </ul>
   
             <div class="nav__links">
-              <a class="nav__btn nav__btn--collapsed main-link main-link--white main-link--small" href="#contacts">Обратный звонок</a>
+              <a class="nav__btn nav__btn--collapsed main-link main-link--white main-link--small scroll-link" href="#callback">Обратный звонок</a>
               <a class="nav__btn main-link main-link--small" href="tel:79816929986">+7 (981) 692-99-86</a>
             </div>
             <button class="nav__toggle toggle" aria-label="кнопка открытия меню"></button>
@@ -68,7 +68,7 @@
     </header>
 
     <main>
-      <section class="intro section mdc-layout-grid">
+      <section class="intro section mdc-layout-grid" id="intro">
         <div class="section__wrapper mdc-layout-grid__inner">
           <div class="section__content mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <p class="intro__desc">
@@ -86,7 +86,7 @@
         </div>
       </section>
 
-      <section class="efficiency section section--grey mdc-layout-grid">
+      <section class="efficiency section section--grey mdc-layout-grid" id="efficiency">
         <div class="section__wrapper ">
           <h2 class="section__title section__title--center">
             Средние показатели <span>нашей эффективности</span>
@@ -282,7 +282,7 @@
               Т.е. то, что отлично работает для школ красоты в другом городе, 
               мы возьмем и нацелим именно на Ваших потенциальных клиентов.
             </p>
-            <a class="main-link" href="#">
+            <a class="main-link scroll-link" href="#callback">
                 Узнать больше
             </a>
           </div>
@@ -308,7 +308,7 @@
               ключевое слово.
             </p>
 
-            <a class="main-link" href="#contacts">
+            <a class="main-link scroll-link" href="#callback">
               Узнать показатели эффективности
             </a>
           </div>
@@ -352,7 +352,7 @@
             </li>
             </ul>
 
-            <a class="main-link" href="#">
+            <a class="main-link scroll-link" href="#callback">
               Заказать обратный звонок
             </a>
           </div>
@@ -378,7 +378,7 @@
               лучше настраиваем рекламу.
             </p>
 
-            <a class="main-link" href="#contacts">
+            <a class="main-link scroll-link" href="#callback">
               Заказать обратный звонок
             </a>
           </div>
@@ -391,10 +391,10 @@
 
       <section class="presentation section mdc-layout-grid">
         <div class="section__wrapper mdc-layout-grid__inner">
-          <div class="section__picture mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
+          <div class="presentation__picture mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <picture>
-              <source srcset="images/director.webp">
-              <img src="images/director.jpg" alt="">
+              <source srcset="assets/director.webp">
+              <img src="assets/director.jpg" alt="Директор">
             </picture>
           </div>
 
@@ -417,7 +417,7 @@
               уверен, Вам он понравится.
             </p>
 
-            <a class="main-link " href="#contacts">
+            <a class="main-link scroll-link" href="#contacts">
               Получить медиаплан продвижения
             </a>
           </div>
@@ -685,7 +685,7 @@
         </div>
       </section>
 
-      <section class="clients section section--grey mdc-layout-grid">
+      <section class="clients section section--grey mdc-layout-grid" id="clients">
         <div class="clients__wrapper section__wrapper">
           <h2 class="section__title section__title--center">
             Некоторые из <span>наших клиентов</span>
@@ -794,7 +794,7 @@
         </div>
       </section>
 
-      <section class="team section mdc-layout-grid">
+      <section class="team section mdc-layout-grid" id="team">
         <div class="team__wrapper section__wrapper">
           <h2 class="section__title section__title--center">
             <span>Ключевые игроки</span> нашей команды
@@ -869,7 +869,7 @@
         </div>
       </section>
 
-      <section class="info section mdc-layout-grid">
+      <section class="info section mdc-layout-grid" id="contacts">
         <div class="section__wrapper mdc-layout-grid__inner">
           <div class="info__contacts contacts mdc-layout-grid__cell mdc-layout-grid__cell--span-5-desktop">
             <ul class="contacts__list">
@@ -892,7 +892,7 @@
             </ul>
           </div>
 
-          <div class="contacts__form mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop">
+          <div class="contacts__form mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop" id="callback">
             <form id="application-form" class="application-form" data-modal="modal-thank">
 
               <h2 class="application-form__title section__title section__title--center">
@@ -925,7 +925,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="main-footer">
@@ -937,22 +936,22 @@
         </a>
         <ul class="main-footer__list mdc-layout-grid__inner">
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-            <a href="#" class="main-footer__link">Почему мы</a>
+            <a href="#intro" class="main-footer__link scroll-link">Почему мы</a>
           </li>
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-            <a href="#" class="main-footer__link">Средние показатели эффективности</a>
+            <a href="#efficiency" class="main-footer__link scroll-link">Средние показатели эффективности</a>
           </li>
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-            <a href="#" class="main-footer__link">Наши клиенты</a>
+            <a href="#clients" class="main-footer__link scroll-link">Наши клиенты</a>
           </li>
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-            <a href="#" class="main-footer__link">Команда</a>
+            <a href="#team" class="main-footer__link scroll-link">Команда</a>
           </li>
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-            <a href="#" class="main-footer__link">Контакты</a>
+            <a href="#contacts" class="main-footer__link scroll-link">Контакты</a>
           </li>
           <li class="main-footer__item mdc-layout-grid__cell mdc-layout-grid__cell--span-2-desktop">
-            <a href="#" class="main-footer__link">Обратная связь</a>
+            <a href="#callback" class="main-footer__link scroll-link">Обратная связь</a>
           </li>
         </ul>
       </div>

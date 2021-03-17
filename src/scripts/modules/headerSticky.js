@@ -8,8 +8,6 @@ export const headerSticky = () => {
   const headerInitialHeight = getElCurHeight(header);
   const firstSection = document.querySelector('section');
 
-  console.log(firstSection)
-
   const onScrollHandler = () => {
     if(window.pageYOffset > headerInitialHeight) {
       header.classList.add('main-header--sticky');

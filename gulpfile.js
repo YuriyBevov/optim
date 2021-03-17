@@ -32,6 +32,7 @@ const webpack = require("webpack-stream");
 
 const svgstore = require("gulp-svgstore");
 const imagemin = require("gulp-imagemin");
+const toWebp = require("gulp-webp");
 
 // SERVER
 
@@ -98,8 +99,8 @@ const refresh = (done) => {
   done();
 };
 
-const images = () => (
-  gulp.src(PATHS.images.src)
+const images = () => {
+  return gulp.src(PATHS.images.src)
   .pipe(imagemin([
     imagemin.mozjpeg({quality: 75, progressive: true}),
     imagemin.optipng({optimizationLevel: 3}),
@@ -111,7 +112,13 @@ const images = () => (
     })
   ]))
   .pipe(gulp.dest(PATHS.images.dest))
-);
+};
+
+const webp = () => {
+  return gulp.src(PATHS.images.webpSrc)
+    .pipe(toWebp({quality: 90}))
+    .pipe(gulp.dest(PATHS.images.dest))
+}
 
 const sprite = () => {
   return gulp.src([PATHS.images.spriteSrc])
@@ -120,7 +127,7 @@ const sprite = () => {
     .pipe(gulp.dest(PATHS.images.dest));
 };
 
-const build = gulp.series(clean, fonts, sprite, html, styles, js, images);
+const build = gulp.series(clean, fonts, sprite, html, styles, js, images, webp);
 const start = gulp.series(build, server);
 
 exports.build = build;
