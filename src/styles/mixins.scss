@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-@mixin section_padding() {
+@mixin common_padding() {
     padding: 5rem 2rem;
 
     @media(max-width: $desktop) {
@@ -26,7 +26,7 @@
     }
 }
 
-@mixin section_title_mb() {
+@mixin common_title_mb() {
     margin-bottom: 5rem;
 
     @media(max-width: $desktop) {

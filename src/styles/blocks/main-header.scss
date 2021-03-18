@@ -3,7 +3,7 @@
   
     &__wrapper {
         @include flex-row();        
-        @include section_padding();
+        @include common_padding();
 
         max-width: $max-page-width;
     }

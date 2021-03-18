@@ -6,7 +6,7 @@
         width: 100%;
         max-width: $max-page-width;
         margin: 0 auto;
-        @include section_padding();
+        @include common_padding();
     }
 
     &__list {

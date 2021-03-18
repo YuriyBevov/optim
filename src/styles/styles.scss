@@ -3,13 +3,13 @@
 @import "variables";
 @import "mixins";
 @import "global";
-@import "common";
+
 @import "md-layout";
+@import "common";
 
 @import "./blocks/main-header";
 @import "./blocks/nav";
 
-@import "./blocks/section";
 @import "./blocks/intro";
 @import "./blocks/reasons";
 @import "./blocks/plan";

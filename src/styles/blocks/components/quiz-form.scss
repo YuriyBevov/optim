@@ -8,7 +8,7 @@
         margin: 0 auto;
 
         background-color: $col_white;
-        @include section_padding();
+        @include common_padding();
 
         box-shadow: $box-shadow_base;
 
