@@ -533,13 +533,16 @@
           </div>
 
           <form action="#" method="POST" class="quiz-form" id="quiz-form" data-modal="modal-quiz">
+
+            <input type="hidden" name="form-type-quiz" id="form-type-quiz">
+
             <div class="quiz-form__content hidden" data-id="1">
               <p class="common__text">
                  Вопрос 1/5
               </p>
 
               <label for="quiz_city" class="common__title quiz-form__title">Ваш город?</label>
-              <input class="form-control" type="text" name="quiz_city" id="quiz_city" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="your-city" id="quiz_city" placeholder="Ваш Ответ...">
 
               <p class="common__text common__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;1%</span>
@@ -562,7 +565,7 @@
               </p>
 
               <label for="quiz_courses" class="common__title quiz-form__title">На какие курсы нужно привести клиентов?</label>
-              <input class="form-control" type="text" name="quiz_courses" id="quiz_courses" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="your-course" id="quiz_courses" placeholder="Ваш Ответ...">
 
               <p class="common__text common__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;2%</span>
@@ -580,7 +583,7 @@
               </p>
 
               <label for="quiz_clients" class="common__title quiz-form__title">Сколько нужно клиентов в месяц?</label>
-              <input class="form-control" type="text" name="quiz_clients" id="quiz_clients" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="your-client" id="quiz_clients" placeholder="Ваш Ответ...">
 
               <p class="common__text common__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;3%</span>
@@ -598,7 +601,7 @@
               </p>
 
               <label for="quiz_site" class="common__title quiz-form__title">Сайт компании</label>
-              <input class="form-control" type="text" name="quiz_site" id="quiz_site" placeholder="Ваш Ответ...">
+              <input class="form-control" type="text" name="your-site" id="quiz_site" placeholder="Ваш Ответ...">
 
               <p class="common__text common__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;4%</span>
@@ -616,11 +619,11 @@
               </p>
 
               <label for="quiz_phone" class="common__title quiz-form__title">Контактная информация</label>
-              <input class="form-control" type="text" placeholder="Телефон..." name="quiz_phone" id="quiz_phone">
+              <input class="form-control" type="text" placeholder="Телефон..." name="your-phone" id="quiz_phone">
               <label for="quiz_email" class="visually-hidden">E-mail</label>
-              <input class="form-control" type="text" placeholder="E-mail..." name="quiz_email" id="quiz_email">
+              <input class="form-control" type="text" placeholder="E-mail..." name="your-email" id="quiz_email">
               <label for="quiz_name" class="visually-hidden">Ваше имя</label>
-              <input class="form-control" type="text" placeholder="Имя..." name="quiz_name" id="quiz_name">
+              <input class="form-control" type="text" placeholder="Имя..." name="your-name" id="quiz_name">
 
               <p class="common__text common__text--bold quiz-form__text">
                  Ответьте на этот вопрос и получите <span>скидку&nbsp;5%</span>
@@ -895,24 +898,26 @@
           <div class="info__form mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop" id="callback">
             <form id="application-form" class="application-form" data-modal="modal-thank">
 
+              <input type="hidden" name="form-type-application" id="form-type-application">
+
               <h2 class="application-form__title common__title common__title--center">
                 Оставьте заявку
               </h2>
 
               <label class="visually-hidden" for="application-form-name">Ваше имя</label>
-              <input class="form-control" type="text" name="user_name" id="application-form-name" placeholder="Имя*">
+              <input class="form-control" type="text" name="your-name" id="application-form-name" placeholder="Имя*">
               
               <label class="visually-hidden" for="application-form-mail">Ваша почта</label>
-              <input class="form-control" type="text" name="user_mail" id="application-form-mail" placeholder="E-mail*">
+              <input class="form-control" type="text" name="your-email" id="application-form-mail" placeholder="E-mail*">
               
               <label class="visually-hidden" for="application-form-phone">Телефон</label>
-              <input class="form-control" type="text" name="user_phone" id="application-form-phone" placeholder="Телефон*">
+              <input class="form-control" type="text" name="your-phone" id="application-form-phone" placeholder="Телефон*">
               
               <label for="application-form-msg" class="visually-hidden">Оставьте свое сообщение</label>
-              <textarea id="application-form-msg" placeholder="Сообщение..."></textarea>
+              <textarea id="application-form-msg" name="your-message" placeholder="Сообщение..."></textarea>
 
               <div class="application-form__container">
-                <input type="checkbox" class="application-form__accept-checkbox form-control visually-hidden" name="accept_rules" id="application-form-accept">
+                <input type="checkbox" class="application-form__accept-checkbox form-control visually-hidden" name="personal-info-consent" id="application-form-accept">
                 <label class="application-form__accept-label" for="application-form-accept">Согласен на обработку персональных данных*</label>  
               </div>
 
