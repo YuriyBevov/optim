@@ -1,7 +1,11 @@
+import { clearFormData } from './clearFormData.js';
 import { modalState } from './modalState.js';
 
 export const sendForm = (form, modal) => {
-    // тест ! тут должна быть отправка формы, после показ модалки !
+    form.submit();
+
+    // очищаю данные формы
+    clearFormData(form);
 
     //показ модалки
     modalState(modal);

@@ -52,6 +52,7 @@ export const quiz = () => {
     
         nextBtn.addEventListener('click', showNextQuestion);
         startBtn.removeEventListener('click', startQuiz);
+        startBtn.setAttribute('disabled', true);
     }
 
     let showNextQuestion = () => {

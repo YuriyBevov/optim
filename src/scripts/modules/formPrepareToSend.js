@@ -12,9 +12,10 @@ export const formSend = () => {
         const formControls = form.querySelectorAll('.form-control');
         
         if(formValidation(formControls)) {
+
             const dataModal = form.getAttribute('data-modal');
             const modal = document.querySelector('.' + dataModal);
-
+            
             sendForm(form, modal);
         } else {
             formErrorMsg(form.querySelector('.error-msg'));
