@@ -14,9 +14,18 @@ export const formSend = () => {
         if(formValidation(formControls)) {
 
             const dataModal = form.getAttribute('data-modal');
-            const modal = document.querySelector('.' + dataModal);
+            const modalSuccess = document.querySelector('.' + dataModal);
+            const modalError = document.querySelector('.modal-error');
             
-            sendForm(form, modal);
+            const formData = [];
+
+            formControls.forEach(el => {
+                formData.push(
+                    el.name + ':' + el.value
+                )
+            });
+
+            sendForm(form, formData, modalSuccess, modalError);
         } else {
             formErrorMsg(form.querySelector('.error-msg'));
         }

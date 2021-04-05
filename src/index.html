@@ -882,7 +882,7 @@
           </div>
 
           <div class="info__form mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop" id="callback">
-            <form action="#" method="POST" id="application-form" class="application-form" data-modal="modal-thank">
+            <form action="send.php" method="POST" id="application-form" class="application-form" data-modal="modal-thank">
 
               <input type="hidden" name="application">
 
@@ -900,7 +900,7 @@
               <input class="form-control" type="text" name="your-phone" id="application-form-phone" placeholder="Телефон*">
               
               <label for="application-form-msg" class="visually-hidden">Оставьте свое сообщение</label>
-              <textarea id="application-form-msg" name ="your-message" placeholder="Сообщение..."></textarea>
+              <textarea class="form-control" id="application-form-msg" name ="your-message" placeholder="Сообщение..."></textarea>
 
               <div class="application-form__container">
                 <input type="checkbox" class="application-form__accept-checkbox form-control visually-hidden" name="personal-info-consent" id="application-form-accept">
@@ -967,6 +967,15 @@
       <div class="modal__wrapper common__wrapper">
         <p class="common__text">
           Спасибо! Мы свяжемся с Вами в ближайшее время !
+        </p>
+        <button type="button" class="main-btn modal__btn">ок</button>
+      </div>
+    </div>
+
+    <div class="modal closed modal-error common">
+      <div class="modal__wrapper common__wrapper">
+        <p class="common__text">
+          К сожалению, что то пошло не так... Попробуйте снова!
         </p>
         <button type="button" class="main-btn modal__btn">ок</button>
       </div>
