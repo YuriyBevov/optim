@@ -15,6 +15,8 @@ export const quiz = () => {
     let finalQuestion = questions.length - 1;
     let nextBtn = nextBtns[currentQuestion];
 
+    const formData = [];
+
     const showEl = (el) => {
         el != quizInvitationBlock ? el.style.display = 'flex' : el.style.display = 'grid';
 
@@ -57,9 +59,15 @@ export const quiz = () => {
 
     let showNextQuestion = () => {
 
-        const controls = questions[currentQuestion].querySelectorAll('.form-control');
+        const formControls = questions[currentQuestion].querySelectorAll('.form-control');
 
-        if(formValidation(controls)) {
+        if(formValidation(formControls)) {
+
+            formControls.forEach(el => {
+                formData.push(
+                    el.name + ':' + el.value
+                )
+            });
 
             currentQuestion = currentQuestion === finalQuestion ? finalQuestion : currentQuestion + 1;
             previousQuestion = currentQuestion === 0 ? null : currentQuestion - 1;
@@ -88,14 +96,21 @@ export const quiz = () => {
     let endQuiz = (evt) => {
         evt.preventDefault();
 
-        const controls = questions[currentQuestion].querySelectorAll('.form-control');
+        const formControls = questions[currentQuestion].querySelectorAll('.form-control');
 
-        if(formValidation(controls)) {
+        if(formValidation(formControls)) {
             const form = evt.target.closest('form');
             const dataModal = form.getAttribute('data-modal');
-            const modal = document.querySelector('.' + dataModal)
+            const modalError = document.querySelector('.modal-error');
+            const modalSuccess = document.querySelector('.' + dataModal)
 
-            sendForm(form, modal);
+            formControls.forEach(el => {
+                formData.push(
+                    el.name + ':' + el.value
+                )
+            });
+
+            sendForm(form, formData, modalSuccess, modalError);
             refreshQuizData();
         } else {
             formErrorMsg(questions[currentQuestion].querySelector('.error-msg'))
