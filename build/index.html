@@ -534,7 +534,7 @@
 
           <form action="#" method="POST" class="quiz-form" id="quiz-form" data-modal="modal-quiz">
 
-            <input type="hidden" name="quiz">
+            <input type="hidden" value="quiz" name="form-type">
 
             <div class="quiz-form__content hidden" data-id="1">
               <p class="common__text">
@@ -549,7 +549,7 @@
               </p>
 
               <div class="quiz-form__container">
-                <input type="checkbox" class="quiz-form__accept-checkbox form-control visually-hidden" name="accept_rules" id="quiz-form-accept">
+                <input type="checkbox" class="quiz-form__accept-checkbox form-control visually-hidden" name="personal-info-consent" id="quiz-form-accept">
                 <label class="quiz-form__accept-label" for="quiz-form-accept">Согласен на обработку персональных данных</label>  
               </div>
 
@@ -896,9 +896,9 @@
           </div>
 
           <div class="info__form mdc-layout-grid__cell mdc-layout-grid__cell--span-7-desktop" id="callback">
-            <form action="send.php" method="POST" id="application-form" class="application-form" data-modal="modal-thank">
+            <form action="#" method="POST" id="application-form" class="application-form" data-modal="modal-thank">
 
-              <input type="hidden" name="application">
+              <input type="hidden" value="application" name="form-type">
 
               <h2 class="application-form__title common__title common__title--center">
                 Оставьте заявку
