@@ -1,5 +1,3 @@
-
-
 .common {
     @include flex-col();
 
@@ -26,7 +24,7 @@
         z-index: 10;
 
         &--top {
-            justify-content: top;
+            justify-content: flex-start;
         }
     
         @media(max-width: $tablet) {
