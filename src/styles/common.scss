@@ -24,6 +24,10 @@
     
         padding-right: 2rem;
         z-index: 10;
+
+        &--top {
+            justify-content: top;
+        }
     
         @media(max-width: $tablet) {
             padding-right: 0;
